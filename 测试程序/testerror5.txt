@@ -1,0 +1,36 @@
+const int a =+2;
+const int b=-3;
+int h;
+char arr[12];
+int fun(int s){
+	const int a=3;
+	int x;
+	x = 1;
+	a = 4;
+	if(x<1){
+		x=2;
+	}else{
+		x=3;
+	}
+	return(x);
+}
+int fun1(int s){
+	int x;
+	x = 2;
+	switch(x){
+		case 1:x = 3;
+		case 2:{x=4;}
+		case 3:;
+		case 4:x=x+5;
+		default:;
+	}
+	return(x);
+}
+void main(){
+	const int a=3;
+	int y;
+	x = 4;
+	arr[fun(1)*1]=1;
+	y = arr[arr[fun(1)];
+	y = a+fun(1);
+}

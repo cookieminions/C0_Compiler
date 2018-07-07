@@ -1,0 +1,29 @@
+.data
+.text
+li $k0, 0x10020000
+move $gp, $sp
+li $t0, 1
+sw t0, ($sp)
+subi $sp, $sp, 4
+
+main:
+sw $fp, ($sp)
+subi $sp, $sp, 4
+sw $ra, ($sp)
+subi $sp, $sp, 4
+move $fp, $sp
+sw $t0, 0($k0)
+sw $t1, -4($k0)
+sw $t2, -8($k0)
+sw $t3, -12($k0)
+sw $t4, -16($k0)
+sw $t5, -20($k0)
+sw $t6, -24($k0)
+sw $t7, -28($k0)
+sw $t8, -32($k0)
+sw $t9, -36($k0)
+subi $k0, $k0, 40
+lw $t0, 0($fp)
+move $a0, $t0
+li $v0, 1
+syscall

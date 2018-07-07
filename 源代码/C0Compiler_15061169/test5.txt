@@ -1,0 +1,153 @@
+const int a = 1;
+const int b = 2;
+const char c = 'c';
+
+int x,y;
+char sx,sy;
+
+void fun7{
+	int x,y,z;
+	char c1,c2;
+	scanf(x);
+	scanf(c1,c2);
+	scanf(y,z);
+}
+
+
+void fun6(int a1,int a2,int a3,int a4,int a5){
+	int arr[5];
+	int intarr[10];
+	int i;
+	i=0;
+	while(i<10){
+		intarr[i]=i+'a';
+		i=i+1;
+	}
+	arr[0]=a1;arr[1]=a2;arr[2]=a3;arr[3]=a4;arr[4]=a5;
+	printf("arr[1]=",arr[1]);
+	printf("a2=",a2);
+	switch(arr[1]){
+		case 1:printf("arr[2]=",arr[2]);
+		case 2:printf("arr[3]=",arr[3]);
+		case 4:;
+		case 3:printf("arr[4]=",arr[4]);
+		default:printf(" default ");
+	}
+
+}
+
+void fun5{
+	const char ch = 'r';
+	char charr[10];
+	int f0,f1,f2;
+	int i,j;
+	i = 10;
+	while(i>0){
+		printf("i= ",i);
+		printf(", ");
+		i = i-1;
+	}
+	
+	while(i<5){
+		j = 3;
+		while(j){
+			printf("i=",i);
+			printf(", j=",j);
+			printf(", ");
+			if(i*j>5) printf("fun5 i*j=",i*j);
+			else;
+			printf(", ");
+			j = j-1;
+		}
+		i = i+1;
+	}
+}
+
+void fun4{
+	const char ch = 'r';
+	char charr[10];
+	int f0,f1,f2;
+	f0 = 1;
+	if(f0>2){
+		f0 = 3;
+		printf("fun4 f0>2  ");	
+	}else{
+		f0 = 0;
+		printf("fun4 f0<=2  ");
+	}
+	if(f0){
+		printf("fun4 f0!=0  ");
+	}
+	else{
+		f1 = 3;
+		printf("fun4 f0==0  ");
+	}
+	if(f1>=3){
+		f2 = 2;
+		printf("fun4 f2==2  ");
+		if(f2!=2){
+		}else{
+			f2 = ch;
+			printf("fun4 f2 = ",f2);
+			printf(", ");
+			printf("fun4 ch = ",ch);
+			printf(", ");
+		}
+	}
+	else{}
+}
+
+int fun3(int f1,int f2){
+	const int x = 2;
+	return(f1*f2-2);
+}
+
+int fun2(int f1,int f2,int f3){
+	printf(", fun2-f1=",f1);
+	printf(", fun2-f2=",f2);
+	printf(", fun2-f3=",f3);
+	return((f1+f2)/f3-fun3(f1-f2,f3));
+}
+
+void fun(int t,char tc){
+	const int x = 3;
+	int a;
+	int f0,f1,f2,f3;
+
+	f2 = t;
+	printf(f2);
+	printf(", ");
+	printf(tc);
+	printf(", ");		
+	a = x+b;
+	f0 = a+x;
+	f1 = a+f0;
+	printf(a);
+	printf(", ");
+	printf(f0);
+	printf(", ");
+	printf(f1);
+	y = a;
+	f2 = y*b+t;
+	f3 = f2/2-2;
+	printf(", ",f2);
+	printf(", ",f3);
+	printf(", fun2 = ",fun2(f2,f3,3));
+}
+
+void main(){
+	int t1,t2;
+	int arr[10];
+	
+	fun7;
+	fun5;
+	fun4;
+
+	t2 = 3+b;
+	arr[t2] = 4;
+	printf(arr[5]);
+	printf(", ");
+	fun(3,'f');
+	t1= y+a*t2;
+	printf(", ",t1);
+}

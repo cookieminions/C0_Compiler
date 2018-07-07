@@ -1,0 +1,571 @@
+
+
+		------------------------quadruple_list------------------------
+
+	id		op		op_quad		arg1		arg2		result
+	1		0		dec_const		int		max_l		10
+	2		0		dec_const		int		min_l		-1
+	3		0		dec_const		char		const_c		'a'
+	4		0		dec_const		int		sss		5
+	5		0		dec_const		int		ddd		-5
+	6		1		dec_var		int		x		
+	7		1		dec_var		int		y		
+	8		1		dec_var		int		r		
+	9		2		dec_Arr		int		arr		10
+	10		2		dec_Arr		char		str		5
+	11		1		dec_var		int		p		
+	12		1		dec_var		int		q		
+	13		16		op_jal						main
+	14		3		dec_func						Fibonacci
+	15		4		dec_para		int		n		
+	16		1		dec_var		int		f1		
+	17		1		dec_var		int		f2		
+	18		12		op_getVal				n		#t1
+	19		10		op_assignNum				#t2		1
+	20		18		op_bne		#t1		#t2		lab1
+	21		10		op_assignNum				#t3		1
+	22		25		sys_return						#t3
+	23		15		op_j						lab2
+	24		5		dec_label						lab1
+	25		12		op_getVal				n		#t4
+	26		10		op_assignNum				#t5		0
+	27		21		op_bgt		#t4		#t5		lab3
+	28		10		op_assignNum				#t6		0
+	29		25		sys_return						#t6
+	30		15		op_j						lab4
+	31		5		dec_label						lab3
+	32		12		op_getVal				n		#t7
+	33		10		op_assignNum				#t8		1
+	34		7		op_sub		#t7		#t8		#t9
+	35		14		op_para						#t9
+	36		16		op_jal						Fibonacci
+	37		13		op_getFuncVal				Fibonacci		#t10
+	38		11		op_assignVal				f1		#t10
+	39		12		op_getVal				n		#t11
+	40		10		op_assignNum				#t12		2
+	41		7		op_sub		#t11		#t12		#t13
+	42		14		op_para						#t13
+	43		16		op_jal						Fibonacci
+	44		13		op_getFuncVal				Fibonacci		#t14
+	45		11		op_assignVal				f2		#t14
+	46		12		op_getVal				f1		#t15
+	47		12		op_getVal				f2		#t16
+	48		6		op_add		#t15		#t16		#t17
+	49		25		sys_return						#t17
+	50		5		dec_label						lab4
+	51		5		dec_label						lab2
+	52		25		sys_return						
+	53		3		dec_func						judgemax
+	54		4		dec_para		int		a		
+	55		4		dec_para		int		b		
+	56		12		op_getVal				a		#t18
+	57		12		op_getVal				b		#t19
+	58		22		op_bge		#t18		#t19		lab5
+	59		10		op_assignNum				#t20		0
+	60		25		sys_return						#t20
+	61		15		op_j						lab6
+	62		5		dec_label						lab5
+	63		10		op_assignNum				#t21		1
+	64		25		sys_return						#t21
+	65		5		dec_label						lab6
+	66		25		sys_return						
+	67		3		dec_func						getnum
+	68		12		op_getVal				x		#t22
+	69		10		op_assignNum				#t23		0
+	70		20		op_ble		#t22		#t23		lab7
+	71		10		op_assignNum				#t24		1
+	72		12		op_getVal				sss		#t25
+	73		8		op_mult		#t24		#t25		#t26
+	74		10		op_assignNum				#t27		2
+	75		8		op_mult		#t26		#t27		#t28
+	76		10		op_assignNum				#t29		6
+	77		7		op_sub		#t28		#t29		#t30
+	78		25		sys_return						#t30
+	79		15		op_j						lab8
+	80		5		dec_label						lab7
+	81		12		op_getVal				ddd		#t31
+	82		10		op_assignNum				#t32		2
+	83		8		op_mult		#t31		#t32		#t33
+	84		10		op_assignNum				#t34		8
+	85		6		op_add		#t33		#t34		#t35
+	86		25		sys_return						#t35
+	87		5		dec_label						lab8
+	88		25		sys_return						
+	89		3		dec_func						input
+	90		1		dec_var		int		p		
+	91		1		dec_var		char		q		
+	92		1		dec_var		int		f1		
+	93		1		dec_var		int		f2		
+	94		1		dec_var		int		f3		
+	95		1		dec_var		char		f4		
+	96		1		dec_var		char		f5		
+	97		1		dec_var		char		f6		
+	98		2		dec_Arr		int		fiarr		21
+	99		2		dec_Arr		char		fcarr		21
+	100		23		sys_read						p
+	101		23		sys_read						q
+	102		23		sys_read						f1
+	103		23		sys_read						f2
+	104		23		sys_read						f3
+	105		23		sys_read						f4
+	106		23		sys_read						f5
+	107		23		sys_read						f6
+	108		24		sys_write						STR1
+	109		12		op_getVal				p		#t36
+	110		24		sys_write		1				#t36
+	111		24		sys_write						STR2
+	112		12		op_getVal				q		#t37
+	113		24		sys_write		0				#t37
+	114		24		sys_write						STR3
+	115		12		op_getVal				f1		#t38
+	116		24		sys_write		1				#t38
+	117		24		sys_write						STR4
+	118		12		op_getVal				f2		#t39
+	119		24		sys_write		1				#t39
+	120		24		sys_write						STR4
+	121		12		op_getVal				f3		#t40
+	122		24		sys_write		1				#t40
+	123		24		sys_write						STR4
+	124		12		op_getVal				f4		#t41
+	125		24		sys_write		0				#t41
+	126		24		sys_write						STR4
+	127		12		op_getVal				f5		#t42
+	128		24		sys_write		0				#t42
+	129		24		sys_write						STR4
+	130		12		op_getVal				f6		#t43
+	131		24		sys_write		0				#t43
+	132		25		sys_return						
+	133		3		dec_func						output
+	134		4		dec_para		int		a		
+	135		4		dec_para		char		c		
+	136		0		dec_const		int		const_i		1
+	137		1		dec_var		int		f		
+	138		1		dec_var		int		t		
+	139		16		op_jal						getnum
+	140		13		op_getFuncVal				getnum		#t44
+	141		11		op_assignVal				f		#t44
+	142		12		op_getVal				f		#t45
+	143		14		op_para						#t45
+	144		12		op_getVal				const_i		#t46
+	145		14		op_para						#t46
+	146		16		op_jal						judgemax
+	147		13		op_getFuncVal				judgemax		#t47
+	148		11		op_assignVal				t		#t47
+	149		12		op_getVal				t		#t48
+	150		17		op_beq		#t48		0		lab9
+	151		24		sys_write						STR5
+	152		12		op_getVal				a		#t49
+	153		24		sys_write		1				#t49
+	154		24		sys_write						STR4
+	155		24		sys_write						STR6
+	156		12		op_getVal				f		#t50
+	157		24		sys_write		1				#t50
+	158		24		sys_write						STR7
+	159		15		op_j						lab10
+	160		5		dec_label						lab9
+	161		24		sys_write						STR8
+	162		12		op_getVal				c		#t51
+	163		24		sys_write		0				#t51
+	164		24		sys_write						STR4
+	165		24		sys_write						STR6
+	166		12		op_getVal				f		#t52
+	167		24		sys_write		1				#t52
+	168		24		sys_write						STR7
+	169		5		dec_label						lab10
+	170		25		sys_return						
+	171		3		dec_func						test1
+	172		0		dec_const		int		a		2
+	173		0		dec_const		char		b		'a'
+	174		1		dec_var		int		f0		
+	175		1		dec_var		int		f1		
+	176		2		dec_Arr		int		farr		21
+	177		12		op_getVal				a		#t53
+	178		11		op_assignVal				f0		#t53
+	179		24		sys_write						STR9
+	180		12		op_getVal				f0		#t54
+	181		24		sys_write		1				#t54
+	182		12		op_getVal				f0		#t55
+	183		11		op_assignVal				x		#t55
+	184		24		sys_write						STR10
+	185		12		op_getVal				x		#t56
+	186		24		sys_write		1				#t56
+	187		12		op_getVal				x		#t57
+	188		12		op_getVal				f0		#t58
+	189		10		op_assignNum				#t59		2
+	190		8		op_mult		#t58		#t59		#t60
+	191		6		op_add		#t57		#t60		#t61
+	192		11		op_assignVal				f1		#t61
+	193		24		sys_write						STR11
+	194		12		op_getVal				f1		#t62
+	195		24		sys_write		1				#t62
+	196		12		op_getVal				f1		#t63
+	197		12		op_getVal				f0		#t64
+	198		8		op_mult		#t63		#t64		#t65
+	199		12		op_getVal				x		#t66
+	200		10		op_assignNum				#t67		3
+	201		6		op_add		#t66		#t67		#t68
+	202		9		op_div		#t65		#t68		#t69
+	203		11		op_assignVal				y		#t69
+	204		24		sys_write						STR12
+	205		12		op_getVal				y		#t70
+	206		24		sys_write		1				#t70
+	207		10		op_assignNum				#t71		1
+	208		10		op_assignNum				#t72		1
+	209		11		op_assignVal		#t71		arr		#t72
+	210		10		op_assignNum				#t73		2
+	211		12		op_getVal				y		#t74
+	212		11		op_assignVal		#t73		arr		#t74
+	213		10		op_assignNum				#t75		3
+	214		12		op_getVal				x		#t76
+	215		12		op_getVal				a		#t77
+	216		10		op_assignNum				#t78		3
+	217		7		op_sub		#t77		#t78		#t79
+	218		8		op_mult		#t76		#t79		#t80
+	219		11		op_assignVal		#t75		arr		#t80
+	220		10		op_assignNum				#t81		4
+	221		12		op_getVal				b		#t82
+	222		10		op_assignNum				#t83		3
+	223		8		op_mult		#t82		#t83		#t84
+	224		10		op_assignNum				#t85		2
+	225		6		op_add		#t84		#t85		#t86
+	226		11		op_assignVal		#t81		arr		#t86
+	227		10		op_assignNum				#t87		5
+	228		10		op_assignNum				#t88		'd'
+	229		10		op_assignNum				#t89		3
+	230		7		op_sub		#t88		#t89		#t90
+	231		11		op_assignVal		#t87		arr		#t90
+	232		10		op_assignNum				#t91		1
+	233		10		op_assignNum				#t92		'b'
+	234		11		op_assignVal		#t91		farr		#t92
+	235		24		sys_write						STR13
+	236		10		op_assignNum				#t93		1
+	237		12		op_getVal		#t93		farr		#t94
+	238		24		sys_write		1				#t94
+	239		10		op_assignNum				#t95		2
+	240		10		op_assignNum				#t96		'a'
+	241		10		op_assignNum				#t97		'b'
+	242		6		op_add		#t96		#t97		#t98
+	243		11		op_assignVal		#t95		farr		#t98
+	244		24		sys_write						STR14
+	245		10		op_assignNum				#t99		2
+	246		12		op_getVal		#t99		farr		#t100
+	247		24		sys_write		1				#t100
+	248		10		op_assignNum				#t101		3
+	249		10		op_assignNum				#t102		'a'
+	250		10		op_assignNum				#t103		3
+	251		8		op_mult		#t102		#t103		#t104
+	252		11		op_assignVal		#t101		farr		#t104
+	253		24		sys_write						STR15
+	254		10		op_assignNum				#t105		3
+	255		12		op_getVal		#t105		farr		#t106
+	256		24		sys_write		1				#t106
+	257		10		op_assignNum				#t107		3
+	258		12		op_getVal		#t107		arr		#t108
+	259		11		op_assignVal				f0		#t108
+	260		24		sys_write						STR9
+	261		12		op_getVal				f0		#t109
+	262		24		sys_write		1				#t109
+	263		10		op_assignNum				#t110		2
+	264		12		op_getVal		#t110		farr		#t111
+	265		11		op_assignVal				f1		#t111
+	266		24		sys_write						STR11
+	267		12		op_getVal				f1		#t112
+	268		24		sys_write		1				#t112
+	269		10		op_assignNum				#t113		2
+	270		12		op_getVal		#t113		arr		#t114
+	271		12		op_getVal				f0		#t115
+	272		6		op_add		#t114		#t115		#t116
+	273		11		op_assignVal				f0		#t116
+	274		24		sys_write						STR9
+	275		12		op_getVal				f0		#t117
+	276		24		sys_write		1				#t117
+	277		10		op_assignNum				#t118		3
+	278		12		op_getVal		#t118		arr		#t119
+	279		10		op_assignNum				#t120		2
+	280		12		op_getVal		#t120		farr		#t121
+	281		7		op_sub		#t119		#t121		#t122
+	282		11		op_assignVal				f1		#t122
+	283		24		sys_write						STR11
+	284		12		op_getVal				f1		#t123
+	285		24		sys_write		1				#t123
+	286		10		op_assignNum				#t124		1
+	287		10		op_assignNum				#t125		5
+	288		11		op_assignVal		#t124		farr		#t125
+	289		24		sys_write						STR16
+	290		5		dec_label						lab11
+	291		10		op_assignNum				#t126		1
+	292		12		op_getVal		#t126		farr		#t127
+	293		17		op_beq		#t127		0		lab13
+	294		24		sys_write						STR17
+	295		10		op_assignNum				#t128		1
+	296		12		op_getVal		#t128		farr		#t129
+	297		12		op_getVal		#t129		arr		#t130
+	298		24		sys_write		1				#t130
+	299		10		op_assignNum				#t131		1
+	300		10		op_assignNum				#t132		1
+	301		12		op_getVal		#t132		farr		#t133
+	302		10		op_assignNum				#t134		1
+	303		7		op_sub		#t133		#t134		#t135
+	304		11		op_assignVal		#t131		farr		#t135
+	305		15		op_j						lab11
+	306		5		dec_label						lab13
+	307		25		sys_return						
+	308		3		dec_func						test2
+	309		4		dec_para		int		p		
+	310		1		dec_var		int		test		
+	311		12		op_getVal				p		#t136
+	312		10		op_assignNum				#t137		5
+	313		20		op_ble		#t136		#t137		lab14
+	314		10		op_assignNum				#t138		5
+	315		11		op_assignVal				p		#t138
+	316		15		op_j						lab15
+	317		5		dec_label						lab14
+	318		5		dec_label						lab15
+	319		5		dec_label						lab16
+	320		12		op_getVal				p		#t139
+	321		10		op_assignNum				#t140		10
+	322		22		op_bge		#t139		#t140		lab17
+	323		12		op_getVal				p		#t141
+	324		10		op_assignNum				#t142		2
+	325		6		op_add		#t141		#t142		#t143
+	326		11		op_assignVal				p		#t143
+	327		12		op_getVal				p		#t144
+	328		11		op_assignVal				test		#t144
+	329		5		dec_label						lab18
+	330		12		op_getVal				test		#t145
+	331		10		op_assignNum				#t146		0
+	332		20		op_ble		#t145		#t146		lab19
+	333		12		op_getVal				test		#t147
+	334		10		op_assignNum				#t148		3
+	335		7		op_sub		#t147		#t148		#t149
+	336		11		op_assignVal				test		#t149
+	337		15		op_j						lab18
+	338		5		dec_label						lab19
+	339		15		op_j						lab16
+	340		5		dec_label						lab17
+	341		12		op_getVal				x		#t150
+	342		18		op_bne		#t150		1		lab21
+	343		10		op_assignNum				#t151		2
+	344		11		op_assignVal				x		#t151
+	345		15		op_j						lab20
+	346		5		dec_label						lab21
+	347		18		op_bne		#t150		2		lab22
+	348		10		op_assignNum				#t152		3
+	349		11		op_assignVal				x		#t152
+	350		15		op_j						lab20
+	351		5		dec_label						lab22
+	352		18		op_bne		#t150		3		lab23
+	353		15		op_j						lab20
+	354		5		dec_label						lab23
+	355		18		op_bne		#t150		4		lab24
+	356		12		op_getVal				x		#t153
+	357		10		op_assignNum				#t154		5
+	358		6		op_add		#t153		#t154		#t155
+	359		11		op_assignVal				x		#t155
+	360		15		op_j						lab20
+	361		5		dec_label						lab24
+	362		5		dec_label						lab20
+	363		12		op_getVal				test		#t156
+	364		18		op_bne		#t156		2		lab26
+	365		10		op_assignNum				#t157		2
+	366		8		op_mult		#t157		-1		#t158
+	367		11		op_assignVal				test		#t158
+	368		10		op_assignNum				#t159		2
+	369		11		op_assignVal				x		#t159
+	370		15		op_j						lab25
+	371		5		dec_label						lab26
+	372		5		dec_label						lab25
+	373		24		sys_write						STR18
+	374		12		op_getVal				test		#t160
+	375		24		sys_write		1				#t160
+	376		24		sys_write						STR19
+	377		12		op_getVal				x		#t161
+	378		24		sys_write		1				#t161
+	379		10		op_assignNum				#t162		'x'
+	380		25		sys_return						#t162
+	381		25		sys_return						
+	382		3		dec_func						fulltest
+	383		0		dec_const		int		h		1
+	384		1		dec_var		int		i		
+	385		1		dec_var		int		j		
+	386		1		dec_var		char		ch		
+	387		24		sys_write						STR19
+	388		12		op_getVal				x		#t163
+	389		24		sys_write		1				#t163
+	390		10		op_assignNum				#t164		0
+	391		11		op_assignVal				i		#t164
+	392		5		dec_label						lab27
+	393		12		op_getVal				i		#t165
+	394		12		op_getVal				max_l		#t166
+	395		22		op_bge		#t165		#t166		lab28
+	396		12		op_getVal				i		#t167
+	397		12		op_getVal				i		#t168
+	398		11		op_assignVal		#t167		arr		#t168
+	399		12		op_getVal				i		#t169
+	400		10		op_assignNum				#t170		5
+	401		22		op_bge		#t169		#t170		lab29
+	402		12		op_getVal				i		#t171
+	403		12		op_getVal		#t171		str		#t172
+	404		11		op_assignVal				ch		#t172
+	405		15		op_j						lab30
+	406		5		dec_label						lab29
+	407		5		dec_label						lab30
+	408		12		op_getVal				i		#t173
+	409		10		op_assignNum				#t174		3
+	410		22		op_bge		#t173		#t174		lab31
+	411		12		op_getVal				x		#t175
+	412		12		op_getVal				i		#t176
+	413		10		op_assignNum				#t177		1
+	414		6		op_add		#t176		#t177		#t178
+	415		8		op_mult		#t175		#t178		#t179
+	416		11		op_assignVal				x		#t179
+	417		15		op_j						lab32
+	418		5		dec_label						lab31
+	419		12		op_getVal				x		#t180
+	420		12		op_getVal				i		#t181
+	421		7		op_sub		#t180		#t181		#t182
+	422		11		op_assignVal				x		#t182
+	423		5		dec_label						lab32
+	424		12		op_getVal				i		#t183
+	425		12		op_getVal		#t183		arr		#t184
+	426		14		op_para						#t184
+	427		12		op_getVal				ch		#t185
+	428		14		op_para						#t185
+	429		16		op_jal						output
+	430		12		op_getVal				i		#t186
+	431		10		op_assignNum				#t187		1
+	432		6		op_add		#t186		#t187		#t188
+	433		11		op_assignVal				i		#t188
+	434		15		op_j						lab27
+	435		5		dec_label						lab28
+	436		10		op_assignNum				#t189		3
+	437		11		op_assignVal				j		#t189
+	438		12		op_getVal				x		#t190
+	439		10		op_assignNum				#t191		0
+	440		20		op_ble		#t190		#t191		lab33
+	441		12		op_getVal				x		#t192
+	442		10		op_assignNum				#t193		1
+	443		6		op_add		#t192		#t193		#t194
+	444		11		op_assignVal				y		#t194
+	445		15		op_j						lab34
+	446		5		dec_label						lab33
+	447		12		op_getVal				x		#t195
+	448		8		op_mult		#t195		-1		#t196
+	449		10		op_assignNum				#t197		1
+	450		6		op_add		#t196		#t197		#t198
+	451		11		op_assignVal				y		#t198
+	452		5		dec_label						lab34
+	453		10		op_assignNum				#t199		'a'
+	454		11		op_assignVal				ch		#t199
+	455		24		sys_write						STR19
+	456		12		op_getVal				x		#t200
+	457		24		sys_write		1				#t200
+	458		5		dec_label						lab35
+	459		12		op_getVal				j		#t201
+	460		12		op_getVal				min_l		#t202
+	461		20		op_ble		#t201		#t202		lab36
+	462		12		op_getVal				ch		#t203
+	463		18		op_bne		#t203		97		lab38
+	464		10		op_assignNum				#t204		'b'
+	465		11		op_assignVal				ch		#t204
+	466		12		op_getVal				y		#t205
+	467		12		op_getVal				j		#t206
+	468		9		op_div		#t205		#t206		#t207
+	469		11		op_assignVal				y		#t207
+	470		15		op_j						lab37
+	471		5		dec_label						lab38
+	472		18		op_bne		#t203		98		lab39
+	473		10		op_assignNum				#t208		'c'
+	474		11		op_assignVal				ch		#t208
+	475		12		op_getVal				y		#t209
+	476		12		op_getVal				j		#t210
+	477		6		op_add		#t209		#t210		#t211
+	478		11		op_assignVal				y		#t211
+	479		15		op_j						lab37
+	480		5		dec_label						lab39
+	481		12		op_getVal				y		#t212
+	482		12		op_getVal				j		#t213
+	483		7		op_sub		#t212		#t213		#t214
+	484		11		op_assignVal				y		#t214
+	485		5		dec_label						lab37
+	486		24		sys_write						STR20
+	487		12		op_getVal				y		#t215
+	488		24		sys_write		1				#t215
+	489		12		op_getVal				j		#t216
+	490		10		op_assignNum				#t217		1
+	491		7		op_sub		#t216		#t217		#t218
+	492		11		op_assignVal				j		#t218
+	493		15		op_j						lab35
+	494		5		dec_label						lab36
+	495		24		sys_write						STR21
+	496		12		op_getVal				h		#t219
+	497		24		sys_write		1				#t219
+	498		25		sys_return						
+	499		3		dec_func						main
+	500		0		dec_const		int		ff		-5
+	501		1		dec_var		int		i		
+	502		1		dec_var		char		ch		
+	503		24		sys_write						STR22
+	504		23		sys_read						x
+	505		12		op_getVal				x		#t220
+	506		11		op_assignVal				r		#t220
+	507		12		op_getVal				x		#t221
+	508		10		op_assignNum				#t222		6
+	509		22		op_bge		#t221		#t222		lab40
+	510		24		sys_write						STR23
+	511		12		op_getVal				x		#t223
+	512		14		op_para						#t223
+	513		16		op_jal						Fibonacci
+	514		13		op_getFuncVal				Fibonacci		#t224
+	515		24		sys_write		1				#t224
+	516		15		op_j						lab41
+	517		5		dec_label						lab40
+	518		24		sys_write						STR24
+	519		10		op_assignNum				#t225		5
+	520		14		op_para						#t225
+	521		16		op_jal						Fibonacci
+	522		13		op_getFuncVal				Fibonacci		#t226
+	523		24		sys_write		1				#t226
+	524		5		dec_label						lab41
+	525		24		sys_write						STR25
+	526		10		op_assignNum				#t227		0
+	527		11		op_assignVal				i		#t227
+	528		5		dec_label						lab42
+	529		12		op_getVal				i		#t228
+	530		10		op_assignNum				#t229		5
+	531		22		op_bge		#t228		#t229		lab43
+	532		23		sys_read						ch
+	533		12		op_getVal				i		#t230
+	534		12		op_getVal				ch		#t231
+	535		11		op_assignVal		#t230		str		#t231
+	536		12		op_getVal				i		#t232
+	537		10		op_assignNum				#t233		1
+	538		6		op_add		#t232		#t233		#t234
+	539		11		op_assignVal				i		#t234
+	540		15		op_j						lab42
+	541		5		dec_label						lab43
+	542		24		sys_write						STR26
+	543		16		op_jal						input
+	544		24		sys_write						STR27
+	545		16		op_jal						test1
+	546		10		op_assignNum				#t235		3
+	547		11		op_assignVal				q		#t235
+	548		12		op_getVal				q		#t236
+	549		14		op_para						#t236
+	550		16		op_jal						test2
+	551		13		op_getFuncVal				test2		#t237
+	552		11		op_assignVal				ch		#t237
+	553		16		op_jal						fulltest
+	554		24		sys_write						STR28
+	555		16		op_jal						getnum
+	556		13		op_getFuncVal				getnum		#t238
+	557		12		op_getVal				ff		#t239
+	558		8		op_mult		#t239		-1		#t240
+	559		12		op_getVal				x		#t241
+	560		6		op_add		#t240		#t241		#t242
+	561		14		op_para						#t242
+	562		16		op_jal						Fibonacci
+	563		13		op_getFuncVal				Fibonacci		#t243
+	564		6		op_add		#t238		#t243		#t244
+	565		24		sys_write		1				#t244
+	566		26		sys_exit						

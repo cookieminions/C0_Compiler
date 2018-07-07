@@ -1,0 +1,219 @@
+const int max_l = 10;
+const int min_l = -1;
+const char const_c = 'a';
+const int sss=5,ddd=-5;
+int x,y,r;
+int arr[10];
+char str[5];
+int p,q;
+
+int Fibonacci(int n){
+	int f1,f2;
+	if(n==1)
+		return(1);
+	else{
+		if(n<=0)
+			return(0);
+		else{
+			f1 = Fibonacci(n-1);
+			f2 = Fibonacci(n-2);
+			return(f1+f2);
+		}
+	}
+}
+
+int judgemax(int a,int b){
+	if(a<b)
+		return(0);
+	else
+		return(1);
+}
+int getnum{
+	if(x>0)
+		return(+1*sss*2-6);
+	else
+		return(ddd*2+8);
+}
+void input{
+	int p;char q;
+	int f1,f2,f3;
+	char f4,f5,f6;
+
+	int fiarr[21];
+	char fcarr[21];
+	
+	;;;{};{}
+	scanf(p,q);
+	scanf(f1,f2);
+	scanf(f3);
+	scanf(f4,f5);
+	scanf(f6);
+	
+	printf("  p: ",p);printf("  q: ",q);
+	printf("  f: ",f1);printf(",",f2);printf(",",f3);printf(",",f4);printf(",",f5);printf(",",f6);	
+}
+
+void output(int a,char c){
+	const int const_i = 1;
+	int f,t;
+	f = getnum;
+	t = judgemax(f,const_i);
+	
+	if(t){
+		printf("  a=",a);
+		printf(",");
+		printf("  f=",f);
+		printf("; ");
+	}
+	else{
+		printf("  c=",c);
+		printf(",");
+		printf("  f=",f);
+		printf("; ");
+	}
+}
+
+void test1{
+	const int a = 2;
+	const char b = 'a';
+	int f0,f1;
+	int farr[21];
+
+	f0 = a; printf("  f0: ",f0);
+	x = f0; printf("  x: ",x);
+	f1 = x+f0*2; printf("  f1: ",f1);
+	y = f1*f0/(x+3); printf("  y: ",y);
+	
+	arr[1]=1;
+	arr[2]=y;
+	arr[3]=x*(a-3);
+	arr[4]=b*3+2;
+	arr[5]='d'-3;
+	
+	farr[1]='b'; printf("  farr[1]: ",farr[1]);
+	farr[2]='a'+'b'; printf("  farr[2]: ",farr[2]);
+	farr[3]='a'*3; printf("  farr[3]: ",farr[3]);
+	
+	f0 = arr[3]; printf("  f0: ",f0);
+	f1 = farr[2]; printf("  f1: ",f1);	
+	f0 = arr[2]+f0; printf("  f0: ",f0);
+	f1 = arr[3]-farr[2]; printf("  f1: ",f1);
+	
+	farr[1] = 5;
+	printf("  arr: ");
+	while(farr[1]){
+		printf(" ",arr[farr[1]]);
+		farr[1] = farr[1]-1;
+	}
+}
+
+char test2(int p){
+	int test;
+	
+	if(p>5)	p = 5;
+	else;
+	
+	while(p<10){
+		p = p+2;
+		test = p; 
+		while(test>0){
+			test = test-3;
+		}
+	}
+	
+	switch(x){
+		case 1:x = 2;
+		case 2:{x = 3;}
+		case 3:;
+		case 4:x = x+5;
+		default:;
+	}
+	switch(test){
+		case 2:{test=-2;x=+2;}
+	}
+	printf("  test = ",test);
+	printf("  x = ",x);
+	return('x');
+}
+
+void fulltest{
+	const int h = +1;
+	int i,j;
+	char ch;
+	printf("  x = ",x);
+	i=0;
+	while(i<max_l){
+		arr[i] = i;
+		if(i<5){
+			ch=str[i];
+		}else{}
+		
+		if(i<3){
+			x = x*(i+1);
+		}
+		else{
+			x = x-i;
+		}
+		
+		output(arr[i],ch);
+		i = i+1;
+	}
+
+	j=+3; 
+	if(x>0) y = x+1;
+	else 	y = -x+1;
+	ch='a';
+	printf("  x = ",x);
+	while(j>min_l){
+		switch(ch){
+			case 'a': {
+				ch='b';
+				y=y/j;
+			}
+			case 'b': {
+				ch='c';
+				y=y+j;
+			}
+			default: y=y-j;
+		}
+		printf("  y = ",y);
+		j = j-1;
+	}
+	
+	printf("  h = ",h);
+}
+
+void main(){
+	const int ff = -5;
+	int i;
+	char ch;
+	
+	printf("  please input x:  ");
+	scanf(x);
+	r = x;
+	
+	if(x<6)
+		printf("Fibonacci(x) = ",Fibonacci(x));
+	else
+		printf("Fibonacci(5) = ",Fibonacci(5));
+
+	printf("  please input str[len==5]:  ");
+	i = 0; while(i<5){
+		scanf(ch);
+		str[i] = ch;
+		i = i+1;
+	}
+	
+	printf("  test function input(p,q,f1,f2,f3,f4,f5,f6):  ");
+	input;
+	
+	printf("  test function test1, test2, fulltest:  ");
+	test1;
+	q = 3; ch = test2(q);
+	fulltest;
+	
+	printf("  last = ",getnum+Fibonacci(-ff+x));
+	return;
+}
+
+

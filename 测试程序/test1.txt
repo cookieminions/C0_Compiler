@@ -1,0 +1,42 @@
+const char const_c = 'a';
+const int sss=5,ddd=-5;
+int x,y,r;
+int arr[10];
+char str[5];
+
+void test1{
+	const int a = 2;
+	const char b = 'a';
+	int f0,f1;
+	int farr[21];
+
+	f0 = a; printf("  f0: ",f0);
+	x = f0; printf("  x: ",x);
+	f1 = x+f0*2; printf("  f1: ",f1);
+	y = f1*f0/(x+3); printf("  y: ",y);
+	
+	arr[1]=1;
+	arr[2]=y;
+	arr[3]=x*(a-3);
+	arr[4]=b*3+2;
+	arr[5]='d'-3;
+	
+	farr[1]='b'; printf("  farr[1]: ",farr[1]);
+	farr[2]='a'+'b'; printf("  farr[2]: ",farr[2]);
+	farr[3]='a'*3; printf("  farr[3]: ",farr[3]);
+	
+	f0 = arr[3]; printf("  f0: ",f0);
+	f1 = farr[2]; printf("  f1: ",f1);	
+	f0 = arr[2]+f0; printf("  f0: ",f0);
+	f1 = arr[3]-farr[2]; printf("  f1: ",f1);
+	
+	farr[1] = 5;
+	printf("  arr: ");
+	while(farr[1]){
+		printf(" ",arr[farr[1]]);
+		farr[1] = farr[1]-1;
+	}
+}
+void main(){
+	test1;
+}

@@ -1,0 +1,27 @@
+const int c1 = 1;
+const int c2 = 3;
+
+int fun2(int a,int b,int x){
+	switch(x){
+		case 1:;
+		case 2:{
+			switch(c2){
+				case 1:printf(" c2=1 ");
+				case 2:printf(" c2=2 ");
+				default:printf(" c2=? ");
+			}
+		}
+		case 3:{printf(" x= ",x);printf(" ");}
+	}
+	return (a*c2-b*c1);
+}
+
+int fun1(int a,int b,int c){
+	return (a*2/b+c);
+}
+
+void main(){
+	printf(fun1(6,fun2(3,2,2),3));
+	printf(fun1(fun2(1,fun1(2,3,4),3),2,2));
+	
+}

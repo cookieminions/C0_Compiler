@@ -1,0 +1,11 @@
+int x,y;
+const int a = 1;
+const char b = 'a';
+
+int func(int b){
+	return(1);
+}
+
+void main(){
+	printf(" a= ",a);
+}

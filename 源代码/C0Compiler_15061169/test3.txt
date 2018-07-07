@@ -1,0 +1,114 @@
+const int a=1, a1=2;
+const char b='a';
+
+int x,y;
+char ch1,ch2;
+
+int arr[10];
+char charr[10];
+
+void fun0{
+	const int a = 2;
+	int f0,f1;
+	char farr[21];
+
+	f0 = a;
+	x = f0;
+	f1 = x+f0*2;
+	y = f1*f0/(x+3);
+	
+	arr[1]=1;
+	arr[2]=y;
+	arr[3]=x*(a-3);
+	arr[4]=b*3+2;
+	arr[5]='d'-3;
+	
+	farr[1]=arr[2];
+	farr[2]='a'+'b';
+	farr[3]='a'*3;
+	
+	f0 = arr[3];
+	f1 = farr[2];	
+	f0 = arr[2]+f0;
+	f1 = arr[3]-farr[2];
+
+}
+
+void fun1{
+	char c;
+	int f0,f1;
+	char f2;
+	x=2;y=3;
+	if(x){
+		f0 = 5;
+	}else{
+		f0 = 3;
+	}
+
+	if((x+1)<=y){
+		c='b';
+	}else{
+		if(x){
+			printf("hello world");
+			printf("ok i will get you.");
+			printf("you are char ",c);
+			printf("you are int",x);
+			printf("int add char ",x*y+c);
+			printf(x+y);
+			printf(x+c);
+		}else{
+			scanf(f0,f1);
+			scanf(f2);
+			scanf(f0,f2);
+			scanf(c,x);
+		}
+		if(x-y){
+			while(x){
+				arr[9]=x;
+				x=0;
+			}
+		}else{}
+	}
+}
+
+int fun2(int a,char b){
+	int f0;
+	switch(b){
+		case 'f':x=x+1;
+		case 'a':{
+			f0=2;
+			while(a>0){
+				b = b+1;
+				a=a-1;
+			}
+		}
+		case 'b':;
+		case 'c':if(a>0){b='a';a=a-1;}else{b='b';a=a+1;}
+		default:x=3-2*y;
+	}
+	
+	return (a+1);
+}
+
+void fun3(int ff){
+	const int cf0=1,cf1=2;
+	char f0;
+	int f1;
+	f0='e';
+	f1 = 10;
+	while(f1!=1){
+		f1=f1-1;
+	}	
+	while(f1<5){
+		while(f0>'a'){
+			printf("f0 = ",f0);
+			f0 = f0-1;
+		}
+		f1 = f1+1;
+	}
+}
+
+void main(){
+	fun1;
+
+}

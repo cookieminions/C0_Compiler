@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1515589342 source:e:\编译技术\编译课设\c0compiler_15061169\error.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"error.h"
+	"compiler.h"
+
+1513491368 e:\编译技术\编译课设\c0compiler_15061169\error.h
+	<stdio.h>
+	<stdlib.h>
+
+1515841116 e:\编译技术\编译课设\c0compiler_15061169\compiler.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1514108961 source:e:\编译技术\编译课设\c0compiler_15061169\lexcal.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"compiler.h"
+	"error.h"
+
+1513161615 source:e:\编译技术\编译课设\c0compiler_15061169\main.cpp
+	"compiler.h"
+	"error.h"
+
+1515823609 source:e:\编译技术\编译课设\c0compiler_15061169\compiler.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"compiler.h"
+	"error.h"
+
+1514953587 source:e:\编译技术\编译课设\c0compiler_15061169\mips.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"compiler.h"
+	"error.h"
+
+1515729535 source:e:\编译技术\编译课设\c0compiler_15061169\printinfo.cpp
+	"compiler.h"
+	"error.h"
+
+1515824860 source:e:\编译技术\编译课设\c0compiler_15061169\optimize.cpp
+

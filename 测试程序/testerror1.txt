@@ -1,0 +1,44 @@
+const int a = 1;
+const char c = 'a';
+const char d;
+char ch;
+int x = 1;
+int y;
+int b;
+int arr[10];
+char str[5];
+
+void s(int a){
+	const int xx=1;
+	const char cc='a';
+	int xxx,yyy;
+	scanf(xxx);
+	printf(yyy);
+	printf("nice");
+	printf("okok",y);
+	return(253);
+	x = 12;
+	y = -(x+2);
+	if(x<2){
+		a=3;
+	}else{
+		b = 4;
+	}
+}
+int haha{
+	int i;
+	i=1;
+	while(a>2){
+		i=i+1;
+	}
+	switch(x){
+		case 1:arr[1]=2;
+		case 'a':str[2]='a';
+		default:arr[2]=3;
+	}
+}
+
+void main(){
+	s(a);
+	haha;
+}
